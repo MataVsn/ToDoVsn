@@ -6,8 +6,8 @@
         </div>
         <div>
             <!-- V-if/else: Checking the status of a task and showing according button -->
-            <button v-if="!model.status">Add</button> 
-            <button v-else>Delete</button>
+            <button @click="emitDone" v-if="!model.status">Add</button> 
+            <button @click="emitRemove" v-else>Delete</button>
         </div>
     </div>
 </template>
@@ -25,10 +25,17 @@ export default {
             }
         }
     },
-    setup () {
-        
-
-        return {}
+    setup (props, {emit}) { 
+        const emitDone = () => { 
+            emit('Done')
+        }
+        const emitRemove = () =>{
+            emit('Remove')
+        }
+        return {
+            emitDone,
+            emitRemove
+        }
     }
 }
 </script>
