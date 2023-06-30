@@ -33,6 +33,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+    .card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 </style>

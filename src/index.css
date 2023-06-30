@@ -11,8 +11,9 @@ main {
   margin: 0 auth;
 }
 
-.card-style {
+button, input, .card-style {
   border-radius: 5px;
   border: solid 1px lightblue;
   padding: 5 px;
 }
+
